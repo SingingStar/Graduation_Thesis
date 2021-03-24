@@ -29,7 +29,7 @@ def plot(input_root_file):
   c_CosTheta1.cd()
   # function SetFillColor is used to set the color of background, "0" represents white, "1" represents black, "2" represents red, "3" represents green.
   c_CosTheta1.SetFillColor(0)
-  h_CosTheta1.Draw()
+  h_CosTheta1.Draw("LE")
   # set the color of line, "0", "1", "2", "3" have the same meaning as SetFillColor.
   h_CosTheta1.SetLineColor(1)
   # save the histogram as png
@@ -39,7 +39,7 @@ def plot(input_root_file):
   c_CosTheta2 = R.TCanvas()
   c_CosTheta2.cd()
   c_CosTheta2.SetFillColor(0)
-  h_CosTheta2.Draw()
+  h_CosTheta2.Draw("LE")
   h_CosTheta2.SetLineColor(1)
   c_CosTheta2.SaveAs("CosTheta2.png")
 
@@ -47,7 +47,7 @@ def plot(input_root_file):
   c_CosTheta3 = R.TCanvas()
   c_CosTheta3.cd()
   c_CosTheta3.SetFillColor(0)
-  h_CosTheta3.Draw()
+  h_CosTheta3.Draw("LE")
   h_CosTheta3.SetLineColor(1)
   c_CosTheta3.SaveAs("CosTheta3.png")
 
@@ -55,7 +55,7 @@ def plot(input_root_file):
   c_CosTheta4 = R.TCanvas()
   c_CosTheta4.cd()
   c_CosTheta4.SetFillColor(0)
-  h_CosTheta4.Draw()
+  h_CosTheta4.Draw("LE")
   h_CosTheta4.SetLineColor(1)
   c_CosTheta4.SaveAs("CosTheta4.png")
 
