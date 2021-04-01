@@ -47,6 +47,15 @@ def plot(InputROOTFile):
   h_LLCosTheta3 = rootfile.Get("LLCosTheta3")
   h_LLCosTheta4 = rootfile.Get("LLCosTheta4")
 
+  h_ThetaStar1 = rootfile.Get("ThetaStar1")
+  h_ThetaStar2 = rootfile.Get("ThetaStar2")
+  h_TTThetaStar1 = rootfile.Get("TTThetaStar1")
+  h_TTThetaStar2 = rootfile.Get("TTThetaStar2")
+  h_TLThetaStar1 = rootfile.Get("TLThetaStar1")
+  h_TLThetaStar2 = rootfile.Get("TLThetaStar2")
+  h_LLThetaStar1 = rootfile.Get("LLThetaStar1")
+  h_LLThetaStar2 = rootfile.Get("LLThetaStar2")
+
   h_CosThetaStar1 = rootfile.Get("CosThetaStar1")
   h_CosThetaStar2 = rootfile.Get("CosThetaStar2")
   h_TTCosThetaStar1 = rootfile.Get("TTCosThetaStar1")
@@ -369,6 +378,78 @@ def plot(InputROOTFile):
   h_LLCosTheta4.SetLineColor(1)
   c_LLCosTheta4.SaveAs("LLCosTheta4.png")
 
+
+  # histogram of ThetaStar1
+  c_ThetaStar1 = R.TCanvas()
+  c_ThetaStar1.cd()
+  c_ThetaStar1.SetFillColor(0)
+  h_ThetaStar1.Draw("LE")
+  h_ThetaStar1.Scale(0.02419*139*1000/20000)
+  h_ThetaStar1.SetLineColor(1)
+  c_ThetaStar1.SaveAs("ThetaStar1.png")
+
+  # histogram of ThetaStar2
+  c_ThetaStar2 = R.TCanvas()
+  c_ThetaStar2.cd()
+  c_ThetaStar2.SetFillColor(0)
+  h_ThetaStar2.Draw("LE")
+  h_ThetaStar2.Scale(0.02419*139*1000/20000)
+  h_ThetaStar2.SetLineColor(1)
+  c_ThetaStar2.SaveAs("ThetaStar2.png")
+
+  # histogram of TTThetaStar1
+  c_TTThetaStar1 = R.TCanvas()
+  c_TTThetaStar1.cd()
+  c_TTThetaStar1.SetFillColor(0)
+  h_TTThetaStar1.Draw("LE")
+  h_TTThetaStar1.SetLineColor(1)
+  h_TTThetaStar1.Scale(0.01688*139*1000/20000)
+  c_TTThetaStar1.SaveAs("TTThetaStar1.png")
+
+  # histogram of TTThetaStar2
+  c_TTThetaStar2 = R.TCanvas()
+  c_TTThetaStar2.cd()
+  c_TTThetaStar2.SetFillColor(0)
+  h_TTThetaStar2.Draw("LE")
+  h_TTThetaStar2.Scale(0.01688*139*1000/20000)
+  h_TTThetaStar2.SetLineColor(1)
+  c_TTThetaStar2.SaveAs("TTThetaStar2.png")
+
+  # histogram of TLThetaStar1
+  c_TLThetaStar1 = R.TCanvas()
+  c_TLThetaStar1.cd()
+  c_TLThetaStar1.SetFillColor(0)
+  h_TLThetaStar1.Draw("LE")
+  h_TLThetaStar1.Scale(0.005741*139*1000/20000)
+  h_TLThetaStar1.SetLineColor(1)
+  c_TLThetaStar1.SaveAs("TLThetaStar1.png")
+
+  # histogram of TLThetaStar2
+  c_TLThetaStar2 = R.TCanvas()
+  c_TLThetaStar2.cd()
+  c_TLThetaStar2.SetFillColor(0)
+  h_TLThetaStar2.Draw("LE")
+  h_TLThetaStar2.Scale(0.005741*139*1000/20000)
+  h_TLThetaStar2.SetLineColor(1)
+  c_TLThetaStar2.SaveAs("TLThetaStar2.png")
+
+  # histogram of LLThetaStar1
+  c_LLThetaStar1 = R.TCanvas()
+  c_LLThetaStar1.cd()
+  c_LLThetaStar1.SetFillColor(0)
+  h_LLThetaStar1.Draw("LE")
+  h_LLThetaStar1.Scale(0.001406*139*1000/20000)
+  h_LLThetaStar1.SetLineColor(1)
+  c_LLThetaStar1.SaveAs("LLThetaStar1.png")
+
+  # histogram of LLThetaStar2
+  c_LLThetaStar2 = R.TCanvas()
+  c_LLThetaStar2.cd()
+  c_LLThetaStar2.SetFillColor(0)
+  h_LLThetaStar2.Draw("LE")
+  h_LLThetaStar2.Scale(0.001406*139*1000/20000)
+  h_LLThetaStar2.SetLineColor(1)
+  c_LLThetaStar2.SaveAs("LLThetaStar2.png")
 
   # histogram of CosThetaStar1
   c_CosThetaStar1 = R.TCanvas()
@@ -1002,6 +1083,117 @@ def plot(InputROOTFile):
 
   c_CosTheta4Sum.SaveAs("CosTheta4Sum.png")
   c_CosTheta4Sum.Close()
+
+
+  # histogram of ThetaStar1, TTThetaStar1, TLThetaStar1, LLThetaStar1
+  c_ThetaStar1Sum = R.TCanvas()
+  c_ThetaStar1Sum.cd()
+  c_ThetaStar1Sum.SetFillColor(0)
+  h_ThetaStar1.Draw("LE")
+  # plot the other histogram in the same Canvas
+  h_TTThetaStar1.Draw("SameLE")
+  h_TLThetaStar1.Draw("SameLE")
+  h_LLThetaStar1.Draw("SameLE")
+
+  h_ThetaStar1.SetLineColor(1)
+  h_TTThetaStar1.SetLineColor(2)
+  h_TLThetaStar1.SetLineColor(3)
+  h_LLThetaStar1.SetLineColor(4)
+
+  # set the title of these 4 histograms
+  h_ThetaStar1.SetTitle("Compare ThetaStar1; ThetaStar1; Count")
+  h_TTThetaStar1.SetTitle("Compare ThetaStar1; ThetaStar1; Count")
+  h_TLThetaStar1.SetTitle("Compare ThetaStar1; ThetaStar1; Count")
+  h_LLThetaStar1.SetTitle("Compare ThetaStar1; ThetaStar1; Count")
+
+  # set the range of the axis
+  Max1 = h_ThetaStar1.GetMaximum()
+  Max2 = h_TTThetaStar1.GetMaximum()
+  Max3 = h_TLThetaStar1.GetMaximum()
+  Max4 = h_LLThetaStar1.GetMaximum()
+  Max = max(Max1, Max2, Max3, Max4)
+  h_ThetaStar1.SetMaximum(Max*1.2)
+  h_TTThetaStar1.SetMaximum(Max*1.2)
+  h_TLThetaStar1.SetMaximum(Max*1.2)
+  h_LLThetaStar1.SetMaximum(Max*1.2)
+  h_ThetaStar1.SetMinimum(0)
+  h_TTThetaStar1.SetMinimum(0)
+  h_TLThetaStar1.SetMinimum(0)
+  h_LLThetaStar1.SetMinimum(0)
+
+  # add a legend at upper right corner
+  # set the position of the legend
+  leg = R.TLegend(0.7, 0.8, 0.95, 0.95)
+  # set the header of the legend
+  leg.SetHeader("Compare ThetaStar1", "c_ThetaStar1Sum")
+  # add the content in the legend
+  """
+  "l" means line, "p" means polymarker, "f" means box, "e" means draw vertical error bar if option "L" is also specified
+  """
+  leg.AddEntry(h_ThetaStar1,"ThetaStar1","l")
+  leg.AddEntry(h_TTThetaStar1,"TTThetaStar1","l")
+  leg.AddEntry(h_TLThetaStar1,"TLThetaStar1","l")
+  leg.AddEntry(h_LLThetaStar1,"LLThetaStar1","l")
+  leg.Draw()
+
+  c_ThetaStar1Sum.SaveAs("ThetaStar1Sum.png")
+  c_ThetaStar1Sum.Close()
+
+
+
+  # histogram of ThetaStar2, TTThetaStar2, TLThetaStar2, LLThetaStar2
+  c_ThetaStar2Sum = R.TCanvas()
+  c_ThetaStar2Sum.cd()
+  c_ThetaStar2Sum.SetFillColor(0)
+  h_ThetaStar2.Draw("LE")
+  # plot the other histogram in the same Canvas
+  h_TTThetaStar2.Draw("SameLE")
+  h_TLThetaStar2.Draw("SameLE")
+  h_LLThetaStar2.Draw("SameLE")
+
+  h_ThetaStar2.SetLineColor(1)
+  h_TTThetaStar2.SetLineColor(2)
+  h_TLThetaStar2.SetLineColor(3)
+  h_LLThetaStar2.SetLineColor(4)
+
+  # set the title of these 4 histograms
+  h_ThetaStar2.SetTitle("Compare ThetaStar2; ThetaStar2; Count")
+  h_TTThetaStar2.SetTitle("Compare ThetaStar2; ThetaStar2; Count")
+  h_TLThetaStar2.SetTitle("Compare ThetaStar2; ThetaStar2; Count")
+  h_LLThetaStar2.SetTitle("Compare ThetaStar2; ThetaStar2; Count")
+
+  # set the range of the axis
+  Max1 = h_ThetaStar2.GetMaximum()
+  Max2 = h_TTThetaStar2.GetMaximum()
+  Max3 = h_TLThetaStar2.GetMaximum()
+  Max4 = h_LLThetaStar2.GetMaximum()
+  Max = max(Max1, Max2, Max3, Max4)
+  h_ThetaStar2.SetMaximum(Max*1.2)
+  h_TTThetaStar2.SetMaximum(Max*1.2)
+  h_TLThetaStar2.SetMaximum(Max*1.2)
+  h_LLThetaStar2.SetMaximum(Max*1.2)
+  h_ThetaStar2.SetMinimum(0)
+  h_TTThetaStar2.SetMinimum(0)
+  h_TLThetaStar2.SetMinimum(0)
+  h_LLThetaStar2.SetMinimum(0)
+
+  # add a legend at upper right corner
+  # set the position of the legend
+  leg = R.TLegend(0.7, 0.8, 0.95, 0.95)
+  # set the header of the legend
+  leg.SetHeader("Compare ThetaStar2", "c_ThetaStar2Sum")
+  # add the content in the legend
+  """
+  "l" means line, "p" means polymarker, "f" means box, "e" means draw vertical error bar if option "L" is also specified
+  """
+  leg.AddEntry(h_ThetaStar2,"ThetaStar2","l")
+  leg.AddEntry(h_TTThetaStar2,"TTThetaStar2","l")
+  leg.AddEntry(h_TLThetaStar2,"TLThetaStar2","l")
+  leg.AddEntry(h_LLThetaStar2,"LLThetaStar2","l")
+  leg.Draw()
+
+  c_ThetaStar2Sum.SaveAs("ThetaStar2Sum.png")
+  c_ThetaStar2Sum.Close()
 
 
 
@@ -1772,6 +1964,150 @@ def plot(InputROOTFile):
 
   c_CosTheta4SumAdd.SaveAs("CosTheta4SumAdd.png")
   c_CosTheta4SumAdd.Close()
+
+
+
+  # histogram of ThetaStar1, TTThetaStar1, TLThetaStar1, LLThetaStar1, TT+TL+LLThetaStar1
+  c_ThetaStar1SumAdd = R.TCanvas()
+  c_ThetaStar1SumAdd.cd()
+  c_ThetaStar1SumAdd.SetFillColor(0)
+  # create a histogram to save the TT+TL+LL
+  htitle = "TT+TL+LLThetaStar1"
+  nbins, xmin, xmax = 50, -R.TMath.Pi(), R.TMath.Pi()
+  h_AddThetaStar1 = R.TH1F("TT+TL+LLThetaStar1", htitle, nbins, xmin, xmax)
+  h_AddThetaStar1.Add(h_TTThetaStar1, 1)
+  h_AddThetaStar1.Add(h_TLThetaStar1, 1)
+  h_AddThetaStar1.Add(h_LLThetaStar1, 1)
+
+  h_ThetaStar1.Draw("LE")
+  # plot the other histogram in the same Canvas
+  h_TTThetaStar1.Draw("SameLE")
+  h_TLThetaStar1.Draw("SameLE")
+  h_LLThetaStar1.Draw("SameLE")
+  h_AddThetaStar1.Draw("SameLE")
+
+  h_ThetaStar1.SetLineColor(1)
+  h_TTThetaStar1.SetLineColor(2)
+  h_TLThetaStar1.SetLineColor(3)
+  h_LLThetaStar1.SetLineColor(4)
+  h_AddThetaStar1.SetLineColor(5)
+
+  # set the title of these 4 histograms
+  h_ThetaStar1.SetTitle("Compare ThetaStar1; ThetaStar1; Count")
+  h_TTThetaStar1.SetTitle("Compare ThetaStar1; ThetaStar1; Count")
+  h_TLThetaStar1.SetTitle("Compare ThetaStar1; ThetaStar1; Count")
+  h_LLThetaStar1.SetTitle("Compare ThetaStar1; ThetaStar1; Count")
+  h_AddThetaStar1.SetTitle("Compare ThetaStar1; ThetaStar1; Count")
+
+  # set the range of the axis
+  Max1 = h_ThetaStar1.GetMaximum()
+  Max2 = h_TTThetaStar1.GetMaximum()
+  Max3 = h_TLThetaStar1.GetMaximum()
+  Max4 = h_LLThetaStar1.GetMaximum()
+  Max5 = h_AddThetaStar1.GetMaximum()
+  Max = max(Max1, Max2, Max3, Max4, Max5)
+  h_ThetaStar1.SetMaximum(Max*1.2)
+  h_TTThetaStar1.SetMaximum(Max*1.2)
+  h_TLThetaStar1.SetMaximum(Max*1.2)
+  h_LLThetaStar1.SetMaximum(Max*1.2)
+  h_AddThetaStar1.SetMaximum(Max*1.2)
+  h_ThetaStar1.SetMinimum(0)
+  h_TTThetaStar1.SetMinimum(0)
+  h_TLThetaStar1.SetMinimum(0)
+  h_LLThetaStar1.SetMinimum(0)
+  h_AddThetaStar1.SetMinimum(0)
+
+
+  # add a legend at upper right corner
+  # set the position of the legend
+  leg = R.TLegend(0.7, 0.8, 0.95, 0.95)
+  # set the header of the legend
+  leg.SetHeader("Compare ThetaStar1", "c_ThetaStar1SumAdd")
+  # add the content in the legend
+  """
+  "l" means line, "p" means polymarker, "f" means box, "e" means draw vertical error bar if option "L" is also specified
+  """
+  leg.AddEntry(h_ThetaStar1,"ThetaStar1","l")
+  leg.AddEntry(h_TTThetaStar1,"TTThetaStar1","l")
+  leg.AddEntry(h_TLThetaStar1,"TLThetaStar1","l")
+  leg.AddEntry(h_LLThetaStar1,"LLThetaStar1","l")
+  leg.AddEntry(h_AddThetaStar1,"TT+TL+LLThetaStar1","l")
+  leg.Draw()
+
+  c_ThetaStar1SumAdd.SaveAs("ThetaStar1SumAdd.png")
+  c_ThetaStar1SumAdd.Close()
+
+
+  # histogram of ThetaStar2, TTThetaStar2, TLThetaStar2, LLThetaStar2, TT+TL+LLThetaStar2
+  c_ThetaStar2SumAdd = R.TCanvas()
+  c_ThetaStar2SumAdd.cd()
+  c_ThetaStar2SumAdd.SetFillColor(0)
+  # create a histogram to save the TT+TL+LL
+  htitle = "TT+TL+LLThetaStar2"
+  nbins, xmin, xmax = 50, -R.TMath.Pi(), R.TMath.Pi()
+  h_AddThetaStar2 = R.TH1F("TT+TL+LLThetaStar2", htitle, nbins, xmin, xmax)
+  h_AddThetaStar2.Add(h_TTThetaStar2, 1)
+  h_AddThetaStar2.Add(h_TLThetaStar2, 1)
+  h_AddThetaStar2.Add(h_LLThetaStar2, 1)
+
+  h_ThetaStar2.Draw("LE")
+  # plot the other histogram in the same Canvas
+  h_TTThetaStar2.Draw("SameLE")
+  h_TLThetaStar2.Draw("SameLE")
+  h_LLThetaStar2.Draw("SameLE")
+  h_AddThetaStar2.Draw("SameLE")
+
+  h_ThetaStar2.SetLineColor(1)
+  h_TTThetaStar2.SetLineColor(2)
+  h_TLThetaStar2.SetLineColor(3)
+  h_LLThetaStar2.SetLineColor(4)
+  h_AddThetaStar2.SetLineColor(5)
+
+  # set the title of these 4 histograms
+  h_ThetaStar2.SetTitle("Compare ThetaStar2; ThetaStar2; Count")
+  h_TTThetaStar2.SetTitle("Compare ThetaStar2; ThetaStar2; Count")
+  h_TLThetaStar2.SetTitle("Compare ThetaStar2; ThetaStar2; Count")
+  h_LLThetaStar2.SetTitle("Compare ThetaStar2; ThetaStar2; Count")
+  h_AddThetaStar2.SetTitle("Compare ThetaStar2; ThetaStar2; Count")
+
+  # set the range of the axis
+  Max1 = h_ThetaStar2.GetMaximum()
+  Max2 = h_TTThetaStar2.GetMaximum()
+  Max3 = h_TLThetaStar2.GetMaximum()
+  Max4 = h_LLThetaStar2.GetMaximum()
+  Max5 = h_AddThetaStar2.GetMaximum()
+  Max = max(Max1, Max2, Max3, Max4, Max5)
+  h_ThetaStar2.SetMaximum(Max*1.2)
+  h_TTThetaStar2.SetMaximum(Max*1.2)
+  h_TLThetaStar2.SetMaximum(Max*1.2)
+  h_LLThetaStar2.SetMaximum(Max*1.2)
+  h_AddThetaStar2.SetMaximum(Max*1.2)
+  h_ThetaStar2.SetMinimum(0)
+  h_TTThetaStar2.SetMinimum(0)
+  h_TLThetaStar2.SetMinimum(0)
+  h_LLThetaStar2.SetMinimum(0)
+  h_AddThetaStar2.SetMinimum(0)
+
+
+  # add a legend at upper right corner
+  # set the position of the legend
+  leg = R.TLegend(0.7, 0.8, 0.95, 0.95)
+  # set the header of the legend
+  leg.SetHeader("Compare ThetaStar2", "c_ThetaStar2SumAdd")
+  # add the content in the legend
+  """
+  "l" means line, "p" means polymarker, "f" means box, "e" means draw vertical error bar if option "L" is also specified
+  """
+  leg.AddEntry(h_ThetaStar2,"ThetaStar2","l")
+  leg.AddEntry(h_TTThetaStar2,"TTThetaStar2","l")
+  leg.AddEntry(h_TLThetaStar2,"TLThetaStar2","l")
+  leg.AddEntry(h_LLThetaStar2,"LLThetaStar2","l")
+  leg.AddEntry(h_AddThetaStar2,"TT+TL+LLThetaStar2","l")
+  leg.Draw()
+
+  c_ThetaStar2SumAdd.SaveAs("ThetaStar2SumAdd.png")
+  c_ThetaStar2SumAdd.Close()
+
 
 
   # histogram of CosThetaStar1, TTCosThetaStar1, TLCosThetaStar1, LLCosThetaStar1, TT+TL+LLCosThetaStar1
