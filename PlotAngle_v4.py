@@ -916,6 +916,7 @@ def plot(InputROOTFile):
   # enter this pad
   pad1.cd()
 
+
   # draw histograms in this pad
   hs_M1.Draw("Hist")
   h_M1.Draw("SameLE")
@@ -977,6 +978,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_LLM1,"LL","LE")
   leg.AddEntry(h_AddM1,"TT+TL+LL","LE")
   leg.Draw()
+
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
 
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_M1Sum.cd()
@@ -1118,6 +1125,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_LLM1Clone2,"LL","LE")
   leg.AddEntry(h_AddM1Clone2,"TT+TL+LL","LE")
   leg.Draw()
+
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
 
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_M1SumShape.cd()
@@ -1273,6 +1286,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_AddM2,"TT+TL+LL","LE")
   leg.Draw()
 
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
+
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_M2Sum.cd()
 
@@ -1413,6 +1432,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_LLM2Clone2,"LL","LE")
   leg.AddEntry(h_AddM2Clone2,"TT+TL+LL","LE")
   leg.Draw()
+
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
 
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_M2SumShape.cd()
@@ -1566,6 +1591,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_AddCosTheta1,"TT+TL+LL","LE")
   leg.Draw()
 
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
+
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_CosTheta1Sum.cd()
 
@@ -1706,6 +1737,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_LLCosTheta1Clone2,"LL","LE")
   leg.AddEntry(h_AddCosTheta1Clone2,"TT+TL+LL","LE")
   leg.Draw()
+
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
 
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_CosTheta1SumShape.cd()
@@ -1861,6 +1898,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_AddCosTheta2,"TT+TL+LL","LE")
   leg.Draw()
 
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
+
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_CosTheta2Sum.cd()
 
@@ -2001,6 +2044,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_LLCosTheta2Clone2,"LL","LE")
   leg.AddEntry(h_AddCosTheta2Clone2,"TT+TL+LL","LE")
   leg.Draw()
+
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
 
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_CosTheta2SumShape.cd()
@@ -2156,6 +2205,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_AddCosTheta3,"TT+TL+LL","LE")
   leg.Draw()
 
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
+
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_CosTheta3Sum.cd()
 
@@ -2296,6 +2351,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_LLCosTheta3Clone2,"LL","LE")
   leg.AddEntry(h_AddCosTheta3Clone2,"TT+TL+LL","LE")
   leg.Draw()
+
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
 
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_CosTheta3SumShape.cd()
@@ -2451,6 +2512,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_AddCosTheta4,"TT+TL+LL","LE")
   leg.Draw()
 
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
+
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_CosTheta4Sum.cd()
 
@@ -2591,6 +2658,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_LLCosTheta4Clone2,"LL","LE")
   leg.AddEntry(h_AddCosTheta4Clone2,"TT+TL+LL","LE")
   leg.Draw()
+
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
 
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_CosTheta4SumShape.cd()
@@ -2746,6 +2819,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_AddThetaStar1,"TT+TL+LL","LE")
   leg.Draw()
 
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
+
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_ThetaStar1Sum.cd()
 
@@ -2886,6 +2965,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_LLThetaStar1Clone2,"LL","LE")
   leg.AddEntry(h_AddThetaStar1Clone2,"TT+TL+LL","LE")
   leg.Draw()
+
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
 
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_ThetaStar1SumShape.cd()
@@ -3041,6 +3126,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_AddThetaStar2,"TT+TL+LL","LE")
   leg.Draw()
 
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
+
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_ThetaStar2Sum.cd()
 
@@ -3181,6 +3272,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_LLThetaStar2Clone2,"LL","LE")
   leg.AddEntry(h_AddThetaStar2Clone2,"TT+TL+LL","LE")
   leg.Draw()
+
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
 
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_ThetaStar2SumShape.cd()
@@ -3336,6 +3433,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_AddCosThetaStar1,"TT+TL+LL","LE")
   leg.Draw()
 
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
+
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_CosThetaStar1Sum.cd()
 
@@ -3476,6 +3579,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_LLCosThetaStar1Clone2,"LL","LE")
   leg.AddEntry(h_AddCosThetaStar1Clone2,"TT+TL+LL","LE")
   leg.Draw()
+
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
 
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_CosThetaStar1SumShape.cd()
@@ -3631,6 +3740,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_AddCosThetaStar2,"TT+TL+LL","LE")
   leg.Draw()
 
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
+
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_CosThetaStar2Sum.cd()
 
@@ -3771,6 +3886,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_LLCosThetaStar2Clone2,"LL","LE")
   leg.AddEntry(h_AddCosThetaStar2Clone2,"TT+TL+LL","LE")
   leg.Draw()
+
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
 
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_CosThetaStar2SumShape.cd()
@@ -3926,6 +4047,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_AddPhi,"TT+TL+LL","LE")
   leg.Draw()
 
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
+
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_PhiSum.cd()
 
@@ -4066,6 +4193,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_LLPhiClone2,"LL","LE")
   leg.AddEntry(h_AddPhiClone2,"TT+TL+LL","LE")
   leg.Draw()
+
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
 
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_PhiSumShape.cd()
@@ -4221,6 +4354,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_AddCosPhi,"TT+TL+LL","LE")
   leg.Draw()
 
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
+
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_CosPhiSum.cd()
 
@@ -4334,8 +4473,8 @@ def plot(InputROOTFile):
   h_CosPhiClone2.GetYaxis().SetLabelFont(63)
   h_CosPhiClone2.GetYaxis().SetLabelSize(16)
   # set the size of y axis's title
-  h_PhiClone2.GetYaxis().SetTitle("freq.")
-  h_PhiClone2.GetYaxis().SetTitleSize(0.035)
+  h_CosPhiClone2.GetYaxis().SetTitle("freq.")
+  h_CosPhiClone2.GetYaxis().SetTitleSize(0.035)
   # set the range of y axis
   Max1 = h_CosPhiClone2.GetMaximum()
   Max2 = h_TTCosPhiClone2.GetMaximum()
@@ -4361,6 +4500,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_LLCosPhiClone2,"LL","LE")
   leg.AddEntry(h_AddCosPhiClone2,"TT+TL+LL","LE")
   leg.Draw()
+
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
 
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_CosPhiSumShape.cd()
@@ -4516,6 +4661,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_AddPhi1,"TT+TL+LL","LE")
   leg.Draw()
 
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
+
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_Phi1Sum.cd()
 
@@ -4656,6 +4807,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_LLPhi1Clone2,"LL","LE")
   leg.AddEntry(h_AddPhi1Clone2,"TT+TL+LL","LE")
   leg.Draw()
+
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
 
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_Phi1SumShape.cd()
@@ -4811,6 +4968,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_AddCosPhi1,"TT+TL+LL","LE")
   leg.Draw()
 
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
+
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_CosPhi1Sum.cd()
 
@@ -4924,8 +5087,8 @@ def plot(InputROOTFile):
   h_CosPhi1Clone2.GetYaxis().SetLabelFont(63)
   h_CosPhi1Clone2.GetYaxis().SetLabelSize(16)
   # set the size of y axis's title
-  h_Phi1Clone2.GetYaxis().SetTitle("freq.")
-  h_Phi1Clone2.GetYaxis().SetTitleSize(0.035)
+  h_CosPhi1Clone2.GetYaxis().SetTitle("freq.")
+  h_CosPhi1Clone2.GetYaxis().SetTitleSize(0.035)
   # set the range of y axis
   Max1 = h_CosPhi1Clone2.GetMaximum()
   Max2 = h_TTCosPhi1Clone2.GetMaximum()
@@ -4951,6 +5114,12 @@ def plot(InputROOTFile):
   leg.AddEntry(h_LLCosPhi1Clone2,"LL","LE")
   leg.AddEntry(h_AddCosPhi1Clone2,"TT+TL+LL","LE")
   leg.Draw()
+
+  # add another legend at upper left corner
+  latex = R.TLatex()
+  latex.SetTextSize(0.05)
+  latex.DrawLatexNDC(0.2, 0.8, "#bf{#it{ATLAS}} Internal")
+  latex.DrawLatexNDC(0.2, 0.75, "#bf{#bf{#sqrt{s} = 13TeV, 139 fb^{-1}}}")
 
   # After finishing drawing histogram in 1st pad, enter the canvas
   c_CosPhi1SumShape.cd()
